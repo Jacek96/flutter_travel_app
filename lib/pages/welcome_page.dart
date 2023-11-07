@@ -37,6 +37,7 @@ class _WelcomePageState extends State<WelcomePage> {
             child: Container(
               margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +47,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         text: 'Europa',
                         size: 30,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Container(
@@ -57,13 +58,28 @@ class _WelcomePageState extends State<WelcomePage> {
                           size: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                       ResponsiveButton(
                         widht: 120,
                       ),
                     ],
+                  ),
+                  Column(
+                    children: List.generate(3, (indexDots) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 2),
+                        width: 8,
+                        height: index == indexDots ? 25 : 8,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: index == indexDots
+                              ? Color(0xFF5d69b3)
+                              : Colors.grey,
+                        ),
+                      );
+                    }),
                   )
                 ],
               ),
