@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_app/widgets/app_large_text.dart';
 import 'package:flutter_travel_app/widgets/app_text.dart';
+import 'package:flutter_travel_app/widgets/responsive_button.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -55,7 +56,13 @@ class _WelcomePageState extends State<WelcomePage> {
                               'Nie od dziś wiadomo, że poddróże kształcą. Odkryj niesamoitą Europę pordóżując tanio i wygodnie!',
                           size: 14,
                         ),
-                      )
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      ResponsiveButton(
+                        widht: 120,
+                      ),
                     ],
                   )
                 ],
