@@ -18,6 +18,7 @@ class _MainPageState extends State<MainPage> {
       body: pages[0],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
             label: 'Home',
