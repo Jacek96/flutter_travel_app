@@ -19,7 +19,9 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
-        items: [
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: const [
           BottomNavigationBarItem(
             label: 'Home',
             icon: Icon(Icons.apps),
