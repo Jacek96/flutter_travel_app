@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_app/pages/navpages/bar_item_page.dart';
 import 'package:flutter_travel_app/pages/navpages/home_page.dart';
 import 'package:flutter_travel_app/pages/navpages/my_page.dart';
 import 'package:flutter_travel_app/pages/navpages/search_page.dart';
@@ -13,6 +14,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   List pages = [
     HomePage(),
+    BarItemPage(),
     SearchPage(),
     MyPage(),
   ];
@@ -26,8 +28,10 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[0],
+      body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        unselectedFontSize: 0,
+        selectedFontSize: 0,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.amber,
         onTap: onTap,
