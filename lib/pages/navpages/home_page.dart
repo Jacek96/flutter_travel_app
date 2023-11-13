@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_app/widgets/app_large_text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,6 +13,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             padding: const EdgeInsets.only(top: 70, left: 20),
@@ -34,6 +36,13 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 20),
+            child: ApplargeText(text: 'Miejsca do zwiedzenia'),
           ),
         ],
       ),
