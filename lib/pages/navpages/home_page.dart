@@ -8,9 +8,10 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+    TabController _tabController = TabController(length: 3, vsync: this);
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,6 +45,31 @@ class _HomePageState extends State<HomePage> {
             margin: EdgeInsets.only(left: 20),
             child: ApplargeText(text: 'Miejsca do zwiedzenia'),
           ),
+          const SizedBox(
+            height: 30,
+          ),
+          Container(
+            child: TabBar(
+              controller: _tabController,
+              tabs: [
+                Tab(text: "Kraje"),
+                Tab(text: "Atrakcje"),
+                Tab(text: "Potrawy")
+              ],
+            ),
+          ),
+          Container(
+            height: 300,
+            width: double.maxFinite,
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                Text('1'),
+                Text('2'),
+                Text('3'),
+              ],
+            ),
+          )
         ],
       ),
     );
