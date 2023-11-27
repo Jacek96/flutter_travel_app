@@ -110,6 +110,36 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 )
               ],
             ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            height: 100,
+            width: double.maxFinite,
+            margin: EdgeInsets.only(left: 20),
+            child: ListView.builder(
+                itemCount: 4,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (_, index) {
+                  return Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(right: 50),
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.red,
+                          image: DecorationImage(
+                            image: AssetImage("images/france.jpg"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                }),
           )
         ],
       ),
