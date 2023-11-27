@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_app/widgets/app_large_text.dart';
+import 'package:flutter_travel_app/widgets/app_text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -88,6 +89,25 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ),
                 Text('2'),
                 Text('3'),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            margin: const EdgeInsets.only(left: 20, right: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ApplargeText(
+                  text: 'Atrakcje',
+                  size: 22,
+                ),
+                AppText(
+                  text: 'Zobacz wszystkie',
+                  color: Colors.grey,
+                )
               ],
             ),
           )
