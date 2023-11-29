@@ -10,6 +10,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  var imgs = {
+    "food.png": "Food",
+    "sport.jpg": "Sport",
+    "museums.avif": "Museums",
+    "events.jpg": "Events"
+  };
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
@@ -40,7 +46,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           const SizedBox(
-            height: 40,
+            height: 20,
           ),
           Container(
             margin: EdgeInsets.only(left: 20),
@@ -80,7 +86,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.red,
                         image: DecorationImage(
-                          image: AssetImage("images/france.jpg"),
+                          image: AssetImage("images/+imgs"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -122,22 +128,34 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 itemCount: 4,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (_, index) {
-                  return Column(
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(right: 50),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.red,
-                          image: DecorationImage(
-                            image: AssetImage("images/france.jpg"),
-                            fit: BoxFit.cover,
+                  return Container(
+                    margin: EdgeInsets.only(right: 30),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          Container(
+                            // margin: const EdgeInsets.only(right: 50),
+                            width: 80,
+                            height: 80,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    "images/" + imgs.keys.elementAt(index)),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
                           ),
-                        ),
+                          Container(
+                            child: AppText(
+                              text: imgs.values.elementAt(index),
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
                       ),
-                    ],
+                    ),
                   );
                 }),
           )
