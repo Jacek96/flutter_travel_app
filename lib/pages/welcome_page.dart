@@ -69,13 +69,13 @@ class _WelcomePageState extends State<WelcomePage> {
                   Column(
                     children: List.generate(3, (indexDots) {
                       return Container(
-                        margin: EdgeInsets.only(bottom: 2),
+                        margin: const EdgeInsets.only(bottom: 2),
                         width: 8,
                         height: index == indexDots ? 25 : 8,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             color: index == indexDots
-                                ? Color(0xFF5d69b3)
+                                ? const Color(0xFF5d69b3)
                                 : Colors.grey.withOpacity(0.7)),
                       );
                     }),

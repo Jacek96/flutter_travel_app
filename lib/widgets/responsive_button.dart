@@ -12,7 +12,7 @@ class ResponsiveButton extends StatelessWidget {
       height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(0xFF5d69b3),
+        color: const Color(0xFF5d69b3),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

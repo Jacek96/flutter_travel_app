@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             padding: const EdgeInsets.only(top: 70, left: 20),
             child: Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.menu,
                   size: 30,
                   color: Colors.black,
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             height: 20,
           ),
           Container(
-            margin: EdgeInsets.only(left: 20),
+            margin: const EdgeInsets.only(left: 20),
             child: ApplargeText(text: 'Miejsca do zwiedzenia'),
           ),
           const SizedBox(
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               controller: _tabController,
               unselectedLabelColor: Colors.grey,
               indicator: CircleTabIndicator(color: Colors.amber, radius: 4),
-              tabs: [
+              tabs: const [
                 Tab(text: "Kraje"),
                 Tab(text: "Atrakcje"),
                 Tab(text: "Potrawy")
@@ -85,20 +85,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.red,
-                        image: DecorationImage(
-                          image: AssetImage("images/+imgs"),
+                        image: const DecorationImage(
+                          image: AssetImage("images/france.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
                     );
                   },
                 ),
-                Text('2'),
-                Text('3'),
+                const Text('2'),
+                const Text('3'),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               color: Colors.red,
                               image: DecorationImage(
                                 image: AssetImage(
-                                    "images/" + imgs.keys.elementAt(index)),
+                                    "images/${imgs.keys.elementAt(index)}"),
                                 fit: BoxFit.cover,
                               ),
                             ),
