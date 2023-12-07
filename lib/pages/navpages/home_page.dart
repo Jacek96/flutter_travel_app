@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: ApplargeText(text: 'Miejsca do zwiedzenia'),
           ),
           const SizedBox(
-            height: 30,
+            height: 10,
           ),
           Container(
             child: TabBar(
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Container(
             height: 100,
