@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_app/widgets/app_large_text.dart';
+import 'package:flutter_travel_app/widgets/app_text.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -69,6 +70,24 @@ class _DetailPageState extends State<DetailPage> {
                         ApplargeText(
                           text: "1600 zł",
                           color: Colors.grey,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Colors.red,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        AppText(
+                          text: "Zermatt",
+                          color: Colors.black87,
                         ),
                       ],
                     ),
