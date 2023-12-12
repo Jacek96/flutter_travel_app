@@ -133,15 +133,24 @@ class _DetailPageState extends State<DetailPage> {
                       height: 5,
                     ),
                     AppText(text: 'Wybierz ilość uczestników'),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Wrap(
                       children: List.generate(
                         5,
                         (index) {
-                          return AppButtons(
+                          return Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            child: AppButtons(
                               size: 50,
                               color: Colors.white,
-                              backgroundColor: Colors.grey,
-                              borderColor: Colors.yellow);
+                              backgroundColor:
+                                  Color.fromARGB(255, 226, 210, 210),
+                              borderColor: Colors.white,
+                              text: (index + 1).toString(),
+                            ),
+                          );
                         },
                       ),
                     ),
