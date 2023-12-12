@@ -10,6 +10,7 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  int gottenStars = 3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,7 +104,9 @@ class _DetailPageState extends State<DetailPage> {
                             (index) {
                               return Icon(
                                 Icons.star,
-                                color: Colors.amber,
+                                color: index < gottenStars
+                                    ? Colors.amber
+                                    : Colors.grey,
                               );
                             },
                           ),
@@ -116,7 +119,14 @@ class _DetailPageState extends State<DetailPage> {
                           color: Colors.black87,
                         ),
                       ],
-                    )
+                    ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    ApplargeText(
+                      text: 'Liczba osób',
+                      color: Colors.black87.withOpacity(0.8),
+                    ),
                   ],
                 ),
               ),
