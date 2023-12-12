@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_app/widgets/app_buttons.dart';
 import 'package:flutter_travel_app/widgets/app_large_text.dart';
 import 'package:flutter_travel_app/widgets/app_text.dart';
 
@@ -126,6 +127,23 @@ class _DetailPageState extends State<DetailPage> {
                     ApplargeText(
                       text: 'Liczba osób',
                       color: Colors.black87.withOpacity(0.8),
+                      size: 25,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    AppText(text: 'Wybierz ilość uczestników'),
+                    Wrap(
+                      children: List.generate(
+                        5,
+                        (index) {
+                          return AppButtons(
+                              size: 50,
+                              color: Colors.white,
+                              backgroundColor: Colors.grey,
+                              borderColor: Colors.yellow);
+                        },
+                      ),
                     ),
                   ],
                 ),
