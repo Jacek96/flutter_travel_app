@@ -12,6 +12,7 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> {
   int gottenStars = 3;
+  int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -140,15 +141,27 @@ class _DetailPageState extends State<DetailPage> {
                       children: List.generate(
                         5,
                         (index) {
-                          return Container(
-                            margin: const EdgeInsets.only(right: 10),
-                            child: AppButtons(
-                              size: 50,
-                              color: Colors.white,
-                              backgroundColor:
-                                  Color.fromARGB(255, 226, 210, 210),
-                              borderColor: Colors.white,
-                              text: (index + 1).toString(),
+                          return InkWell(
+                            onTap: () {
+                              setState(() {
+                                selectedIndex = index;
+                              });
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 10),
+                              child: AppButtons(
+                                size: 50,
+                                color: selectedIndex == index
+                                    ? Colors.white
+                                    : Colors.black,
+                                backgroundColor: selectedIndex == index
+                                    ? Colors.black
+                                    : Color.fromARGB(255, 226, 210, 210),
+                                borderColor: selectedIndex == index
+                                    ? Colors.black
+                                    : Colors.white,
+                                text: (index + 1).toString(),
+                              ),
                             ),
                           );
                         },
