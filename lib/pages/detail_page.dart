@@ -176,14 +176,36 @@ class _DetailPageState extends State<DetailPage> {
                         color: Colors.black.withOpacity(0.8),
                         size: 20,
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       AppText(
                           text:
                               'Szwajcaria to państwo kojarzące się przede wszystkim z ośnieżonymi stokami górskimi, szumiącymi wodospodami, a także licznymi jeziorami z unoszącą się nad taflą wody mgłą. Szwajcaria charakteryzuje się różnorodnością językową. Istnieją, aż cztery języki urzędowe. Jest to kraj bardzo drogi, a miasto Zurych jest czwartym z najdroższych na świecie. Mimo to kraj ten przyciąga odwiedzających, a turystyka stanowi jedną z najważniejszych gałęzi szwajcarskiej gospodarki.'),
+                      SizedBox(
+                        height: 70,
+                      )
                     ],
                   ),
                 ),
               ),
-            )
+            ),
+            Positioned(
+              bottom: 10,
+              left: 20,
+              child: Row(
+                children: [
+                  AppButtons(
+                    size: 60,
+                    color: Colors.red,
+                    backgroundColor: Colors.white,
+                    borderColor: Colors.grey,
+                    isIcon: true,
+                    icon: Icons.favorite_border,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
