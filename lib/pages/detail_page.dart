@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_app/widgets/app_buttons.dart';
 import 'package:flutter_travel_app/widgets/app_large_text.dart';
 import 'package:flutter_travel_app/widgets/app_text.dart';
+import 'package:flutter_travel_app/widgets/responsive_button.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -193,6 +194,7 @@ class _DetailPageState extends State<DetailPage> {
             Positioned(
               bottom: 10,
               left: 20,
+              right: 20,
               child: Row(
                 children: [
                   AppButtons(
@@ -202,6 +204,12 @@ class _DetailPageState extends State<DetailPage> {
                     borderColor: Colors.grey,
                     isIcon: true,
                     icon: Icons.favorite_border,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  ResponsiveButton(
+                    isResponsive: true,
                   )
                 ],
               ),
